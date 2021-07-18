@@ -1,0 +1,15 @@
+[package]
+name = "dbd-ad-bruteforcer"
+version = "0.0.0"
+edition = "2018"
+authors = [ "adumbidiot <nathaniel.daniel23@outlook.com>" ]
+
+[dependencies]
+reqwest = "0.11.4"
+tokio = { version = "1.8.1", features = [ "macros", "rt-multi-thread" ] }
+anyhow = "1.0.42"
+
+[profile.release]
+lto = "fat"
+codegen-units = 1
+opt-level = 3
